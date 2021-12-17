@@ -7,6 +7,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - run: cargo install fd
+      - run: cargo install fd-find
       - run: cd "~/../.."
       - run: fd msvcr110.dll
