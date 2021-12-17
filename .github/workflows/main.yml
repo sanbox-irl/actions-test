@@ -1,0 +1,12 @@
+name: Build
+
+on: [workflow_dispatch, push]
+
+jobs:
+  build-pc:
+    runs-on: windows-latest
+
+    steps:
+      - run: cargo install fd
+      - run: cd "~/../.."
+      - run: fd msvcr110.dll
